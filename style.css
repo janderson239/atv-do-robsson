@@ -1,0 +1,103 @@
+:root {
+    --cor-fundo: #0D0E15;       /* Roxo/Azul bem escuro */
+    --cor-principal: #1A1C28;   /* Container moderno */
+    --cor-secundaria: #2A2D3E;  /* Cor dos botões em repouso */
+    --cor-destaque: #9D4EDD;    /* Roxo Neon para título e botões */
+    --cor-acento: #00F5D4;      /* Ciano luminoso para hover */
+    --cor-texto: #FFFFFF;       /* Texto branco */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(157, 78, 221, 0.3);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--cor-destaque);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.tela-inicial p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.caixa-perguntas {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 5px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.iniciar-btn, .novamente-btn {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: #FFFFFF;
+    border-color: var(--cor-acento);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(157, 78, 221, 0.4);
+}
+
+.caixa-resultado {
+    display: none;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.texto-resultado {
+    color: var(--cor-texto);
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+}
